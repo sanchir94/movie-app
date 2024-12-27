@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { Movie } from "../../lib/types";
 import { MovieCard } from "./MovieCard";
-import { Button } from "@/components/ui/button";
 
 const options = {
   method: "GET",
@@ -30,12 +30,14 @@ export const Section = async ({ title, endpoint }: Props) => {
       <div className="flex justify-between">
         <h1 className="font-semibold"> {title}</h1>
         <div className="font-italic">
-          <Button>see more </Button>
+          <Link href={`/${endpoint}`}>
+            <p>see more</p>
+          </Link>
         </div>
       </div>
       <div className="p-4 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {movies?.map((movie) => (
-          <MovieCard movie={movie} />
+          <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
     </div>

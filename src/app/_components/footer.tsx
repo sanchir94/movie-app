@@ -11,7 +11,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
+            <h2 className="text-lg w-[247px] h-[52px] font-semibold mb-2">
+              Contact Information
+            </h2>
             <p>
               Email:{" "}
               <a href="mailto:support@moviez.com" className="underline">
