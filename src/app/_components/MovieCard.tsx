@@ -2,14 +2,19 @@ import Link from "next/link";
 import { Movie } from "../../lib/types";
 import { Star } from "lucide-react";
 
-export const MovieCard = ({ movie }: { movie: Movie }) => {
+export const MovieCard = ({
+  movie,
+  detailLink,
+}: {
+  movie: Movie;
+  detailLink?: string;
+}) => {
   const imgPath = movie?.poster_path ?? movie?.backdrop_path;
 
   const src = imgPath
     ? `https://image.tmdb.org/t/p/w500/${imgPath}`
     : `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtIiwbQLKvRRQn_06612_CSC84SsKQTbvoQ&s`;
 
-  console.log(movie);
   return (
     <Link href={`movie/${movie.id}`}>
       <div className="rounded-lg bg-gray-100">
