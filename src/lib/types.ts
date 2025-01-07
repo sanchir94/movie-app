@@ -15,6 +15,11 @@ export type MovieDetials = {
   original_title: string;
   vote_count: number;
 };
+export type Props = {
+  endpoint: string;
+  title: string;
+  moreLink?: string;
+};
 export const Options = {
   method: "GET",
   headers: {
