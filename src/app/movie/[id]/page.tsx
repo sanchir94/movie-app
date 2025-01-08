@@ -13,7 +13,6 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <Header />
       <div>
         <p className="text-2xl font-bold">{data.title}</p>
         <div className=" flex items-center gap-1 ">
