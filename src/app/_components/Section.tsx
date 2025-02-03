@@ -6,7 +6,7 @@ import { Props } from "../../lib/types";
 
 export const Section = async ({ title, endpoint, moreLink }: Props) => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${endpoint}?language=en-US&page=3`,
+    `https://api.themoviedb.org/3/movie/${endpoint}`,
     Options
   );
   const resJson = await response.json();

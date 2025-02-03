@@ -1,7 +1,6 @@
 import { Options } from "@/lib/types";
 import { Star } from "lucide-react";
 import { Section } from "@/app/_components/Section";
-import { Header } from "@/app/_components/Header";
 
 export default async function Page({ params }: { params: { id: string } }) {
   const response = await fetch(
